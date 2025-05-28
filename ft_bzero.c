@@ -6,15 +6,15 @@
 /*   By: egerin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/13 11:49:23 by egerin            #+#    #+#             */
-/*   Updated: 2024/11/13 11:59:13 by egerin           ###   ########.fr       */
+/*   Updated: 2024/11/23 17:32:21 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 #include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {
-	size_t	i;
-	unsigned char *ptr;
+	size_t			i;
+	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
 	i = 0;

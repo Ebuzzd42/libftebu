@@ -6,12 +6,19 @@
 /*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 10:38:48 by egerin            #+#    #+#             */
-/*   Updated: 2024/11/22 18:13:28 by egerin           ###   ########.fr       */
+/*   Updated: 2025/03/04 14:26:23 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 5
+# endif
+
+# include <fcntl.h>
+# include <limits.h>
+# include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>
 
@@ -21,6 +28,7 @@ typedef struct s_list
 	struct s_list	*next;
 }					t_list;
 
+// ****** LIBFT ****** //
 int					ft_isalpha(int c);
 int					ft_isdigit(int c);
 int					ft_isalnum(int c);
@@ -55,5 +63,22 @@ void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
 void				ft_putnbr_fd(int n, int fd);
+
+// ****** FT_PRINTF ****** //
+int					ft_format(char c, va_list ap);
+int					ft_printf(const char *s, ...);
+int					ft_putchar(char c);
+int					ft_putstr(char *s);
+int					ft_putnbr_base(long n, int base);
+int					ft_putnbr_basemaj(long n, int base);
+int					ft_putptr(size_t n, size_t base);
+
+// ****** GET_NEXT_LINE ****** //
+char				*get_next_line(int fd);
+char				*ft_strjoin_gnl(char *s1, char *s2);
+char				*ft_strchr_gnl(char *s, int c);
+size_t				ft_strlen_gnl(char *s);
+size_t				ft_strlcpy_gnl(char *dest, char *src, size_t size);
+size_t				ft_strlcat_gnl(char *dest, char *src, size_t size);
 
 #endif

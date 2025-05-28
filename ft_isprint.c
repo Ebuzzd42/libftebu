@@ -6,11 +6,12 @@
 /*   By: egerin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:03:27 by egerin            #+#    #+#             */
-/*   Updated: 2024/11/13 14:14:26 by egerin           ###   ########.fr       */
+/*   Updated: 2024/11/23 17:31:40 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+#include "libft.h"
 
-int ft_isprint(int c)
+int	ft_isprint(int c)
 {
 	if (c >= 32 && 126 >= c)
 		return (1);

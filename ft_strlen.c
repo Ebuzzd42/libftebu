@@ -6,13 +6,12 @@
 /*   By: egerin <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/12 12:12:34 by egerin            #+#    #+#             */
-/*   Updated: 2024/11/12 12:36:31 by egerin           ###   ########.fr       */
+/*   Updated: 2024/11/23 17:32:12 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include <stdlib.h>
 #include "libft.h"
 
-size_t ft_strlen(const char *s)
+size_t	ft_strlen(const char *s)
 {
 	size_t	i;
 

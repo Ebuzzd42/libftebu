@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: egerin <marvin@42.fr>                      +#+  +:+       +#+        */
+/*   By: egerin <egerin@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/12 11:35:55 by egerin            #+#    #+#             */
-/*   Updated: 2024/11/23 17:33:00 by egerin           ###   ########.fr       */
+/*   Created: 2024/11/25 18:11:03 by egerin            #+#    #+#             */
+/*   Updated: 2025/04/29 22:15:06 by egerin           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
 #include "libft.h"
 
-int	ft_isascii(int c)
+int	ft_putstr(char *s)
 {
-	if (c >= 0 && c <= 127)
-		return (1);
-	return (0);
+	int	i;
+
+	if (s == NULL)
+	{
+		write(1, "(null)", 6);
+		return (6);
+	}
+	i = 0;
+	while (s[i])
+	{
+		write(1, &s[i], 1);
+		i++;
+	}
+	return (i);
 }
